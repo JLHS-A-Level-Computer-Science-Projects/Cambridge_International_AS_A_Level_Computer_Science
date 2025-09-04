@@ -1,4 +1,4 @@
-#册那
+#Produced by 4AMAlan
 import random
 
 list1 = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
@@ -36,4 +36,5 @@ def insertionsort():
 
 rand()
 print(list1)
+
 improvedbubblesort()
