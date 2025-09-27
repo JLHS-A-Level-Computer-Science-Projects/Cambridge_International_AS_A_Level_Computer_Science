@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 # 定义元音字母列表（注意：这里只包含小写元音）
 Vowels = ['a','e','i','o','u']
 
@@ -36,4 +38,5 @@ def RecursiveVowels(InString):
         return RecursiveVowels(InString[1:len(InString)])
 
 # 测试函数
+
 print(RecursiveVowels("imagine"))  # 输出：4（i, a, i, e）
