@@ -41,7 +41,6 @@ def initialise():
     thistree[6].left = thistree[6].right = NULLPOINTER
     
     # 清空所有节点的数据字段
-    import random  # 这里导入random是多余的，可能是原代码的遗留
     for index in range(7):
         thistree[index].data = 'empty'
 
