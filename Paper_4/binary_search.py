@@ -1,4 +1,4 @@
-import random
+giimport random
 
 list1 = [0 for i in range(10)] #初始化list1，包含10个整数类型的元素
 NumberToBeSearched = random.randint(1,100) #搜索1到100之间的随机数
