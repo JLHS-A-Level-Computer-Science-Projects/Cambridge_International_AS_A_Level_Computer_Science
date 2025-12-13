@@ -32,7 +32,7 @@ class LibraryItem:
 
 class Book(LibraryItem):
     def __init__(self, t, a, i):
-        super().__init__(t, a, i) # 使用super()更现代
+        LibraryItem.__init__(self, t, a, i)
         self.__IsRequested = False
         self.__RequestedBy = 0
 
@@ -51,7 +51,7 @@ class Book(LibraryItem):
 
 class CD(LibraryItem):
     def __init__(self, t, a, i):
-        super().__init__(t, a, i)
+        LibraryItem.__init__(self, t, a, i)
         self.__Genre = ""
 
     def GetGenre(self):
