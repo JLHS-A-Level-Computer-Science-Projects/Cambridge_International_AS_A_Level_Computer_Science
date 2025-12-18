@@ -1,3 +1,4 @@
+#Created by 4AMAlan
 class TreasureChest:
 	def __init__(self, q, a, p):
 		self.__question = q      #Private attribute, type: STRING
