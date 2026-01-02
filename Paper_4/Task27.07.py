@@ -332,17 +332,17 @@ def main_menu():
 if __name__ == "__main__":
     # 可以在这里预先添加一些示例数据，方便测试
     # 创建一个示例借阅者
-    sample_borrower = Borrower("Alice Smith", 1001)
+    sample_borrower = Borrower("4AMAlan", 114514)
     borrowers.append(sample_borrower)
 
     # 创建一个示例图书
-    sample_book = Book("The Great Gatsby", "F. Scott Fitzgerald", 2001)
+    sample_book = Book("Cambridge International AS & A-Level Computer Science", "Sylvia Langfield & Dave Duddell", 1919810)
     books.append(sample_book)
 
     # 创建一个示例CD
-    sample_cd = CD("Thriller", "Michael Jackson", 3001)
-    sample_cd.SetGenre("Pop")
+    sample_cd = CD("Tiny Daydream", "Liyuu", 109)
+    sample_cd.SetGenre("Anime")
     cds.append(sample_cd)
 
-    print("Welcome to the Simplified Library System!")
+    print("Welcome to the Library System!")
     main_menu()
