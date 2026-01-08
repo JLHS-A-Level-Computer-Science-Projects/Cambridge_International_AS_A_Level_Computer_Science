@@ -6,7 +6,7 @@ class NodeClass:
         # __data: 存储节点的数据，初始为空字符串
         # __pointer: 存储指向下一个节点的指针，初始为-1表示空指针
         self.__data = ""            #Private attribute, type: STRING
-        self.__pointer = -1         #Private attribute, type: INTEGER
+        self.__pointer = -1        #Private attribute, type: INTEGER
     
     def SetData(self, d):
         # 设置节点的数据字段
