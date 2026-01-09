@@ -159,25 +159,26 @@ def request_book():
     print("Book not found")
 
 def print_all_details():
-    print("\n=== ALL BORROWERS ===")
+    print("BORROWERS:")
     for borrower in borrowers:
         borrower.PrintDetails()
         print()
     
-    print("\n=== ALL BOOKS ===")
+    print("BOOKS:")
     for book in books:
         book.PrintDetails()
         print()
     
-    print("\n=== ALL CDs ===")
+    print("CDs:")
     for cd in cds:
         cd.PrintDetails()
         print()
 
 def add_new_borrower():
     name = input("Enter borrower's name: ")
+    email = input("Enter borrower's email: ")
     borrower_id = int(input("Enter borrower's ID: "))
-    borrowers.append(Borrower(name, borrower_id))
+    borrowers.append(Borrower(name, email, borrower_id))
     print("Added")
 
 def add_new_book():
