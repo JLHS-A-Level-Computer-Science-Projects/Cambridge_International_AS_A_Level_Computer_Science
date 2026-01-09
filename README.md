@@ -1,14 +1,14 @@
-# CIE A-level Computer Science (9618) 学习参考模板
+# CAIE AS & A-Level Computer Science (9618)学习参考模板
 
-这是一个专为南京市金陵中学国际部（JLHS）学生设计的学习用仓库，包含CIE A-level Computer Science (9618) 课程的代码参考实现。
+这是一个专为Cambridge International AS & A-Level Computer Science学生设计的学习用仓库，包含CAIE AS & A-Level Computer Science (9618)课程的代码参考实现。
 
 ## 仓库说明
 
-本仓库旨在为学生提供一个"参考模板"，通过详细的代码注释帮助学生更好地理解计算机科学概念。所有代码均基于教材的编程部分，使用Python语言实现。
+本仓库旨在为学生提供一个参考模板，通过详细的代码注释帮助学生更好地理解计算机科学概念。所有代码均基于教材的编程部分，使用Python语言实现。
 
 ## 课程内容
 
-根据CIE A-level Computer Science (9618) 教学大纲，本仓库包含以下主题的代码示例：
+根据CAIE AS & A-Level Computer Science (9618)教学大纲，本仓库包含以下主题的代码示例：
 
 ### Paper 2 内容
 - [Bubble Sort](./Paper_2/bubble_sort.py) - 冒泡排序算法
@@ -43,5 +43,5 @@
 
 - 为学生提供清晰的代码参考
 - 通过详细注释解释算法和数据结构
-- 帮助学生准备 CIE A-level Computer Science (9618) 考试
+- 帮助学生准备CAIE AS & A-Level Computer Science (9618)考试
 - 促进对编程概念的深入理解
