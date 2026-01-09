@@ -184,14 +184,14 @@ def add_new_borrower():
 def add_new_book():
     title = input("Enter book title: ")
     author = input("Enter author: ")
-    item_id = int(input("Enter book ID (integer): "))
+    item_id = int(input("Enter book ID: "))
     books.append(Book(title, author, item_id))
     print("Added")
 
 def add_new_cd():
     title = input("Enter CD title: ")
     artist = input("Enter artist: ")
-    item_id = int(input("Enter CD ID (integer): "))
+    item_id = int(input("Enter CD ID: "))
     cds.append(CD(title, artist, item_id))
     print("Added")
 
