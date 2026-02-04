@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 # 声明并初始化一个整数数组 NumberArray
 NumberArray = [100, 85, 644, 22, 15, 8, 1]
 # 定义变量用于存储当前要处理的元素值
@@ -76,4 +78,32 @@ def IterativeInsetion(ListToBeSorted):
 		# 将元素放到找到的位置
 		ListToBeSorted[CurrentItem] = ItemToBeSorted
 		CurrentItem -= 1
-	# 返回排序后的
+		# 返回排序后的
+		return ListToBeSorted
+
+print("iterative")
+print(IterativeInsetion(NumberArray))
+
+def BinarySearch(IntegerArray, First, Last, ToFind):
+	'''
+	IntegerArray: type: ARRAY OF INTEGERS
+	First: type: INTEGER
+	Last: type: INTEGER
+	ToFind: INTEGER
+	'''
+	Middle = (First + Last) // 2 + 1
+	if ToFind == IntegerArray[Middle]:
+		return Middle
+	else:
+		if First >= Last:
+			return -1
+		else:
+			if ToFind < IntegerArray[Middle]:
+				return BinarySearch(IntegerArray, First, Middle - 1, ToFind)
+			else:
+				return BinarySearch(IntegerArray, Middle - 1, Last, ToFind)
+
+try:
+	print(BinarySearch(NumberArray, 0, 6, 644))
+except:
+	print("Not Found")

@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 # 定义 Tree 类，用于存储树木信息
 class Tree:
 	# 构造函数，初始化 Tree 对象的各个属性
@@ -61,7 +63,7 @@ def ReadData():
 # 打印单个 Tree 对象的信息
 def PrintTrees(TreeObj):
 	# 检查树是否为常绿树 ("Yes")
-	if TreeObj.GetEvergreen() ==  "Yes ":
+	if TreeObj.GetEvergreen() ==  "Yes":
 		# 如果是常绿树，打印这条消息
 		print(TreeObj.GetTreeName(),  "has a maximum height ", TreeObj.GetMaxHeight(),  "a maximum width ", TreeObj.GetMaxWidth(),  "and grows ", TreeObj.GetGrowth(),  "cm a year. It does not lose leaves. ")
 	else:
@@ -112,7 +114,7 @@ def ChooseTree(TreeList):
 		if TreeMeetRequirements[i].GetTreeName().strip() == NameWantToBuy:
 			# 计算并打印这棵树长到最大高度所需的年数
 			# 年数 = (最大高度 - 购买时高度) / 每年生长高度
-			print("It takes", ((TreeMeetRequirements[i].GetMaxHeight() - HeightWhenBought) // TreeMeetRequirements[i].GetGrowth()), "years to grow to the maxmum height.")
+			print("It takes", ((TreeMeetRequirements[i].GetMaxHeight() - HeightWhenBought) // TreeMeetRequirements[i].GetGrowth()), "years to grow to the maximum height.")
 
 # 调用 ChooseTree 函数，并传入 Trees 列表作为参数
 ChooseTree(Trees)

@@ -75,9 +75,7 @@ def readData():
 			break
 
 		# 使用读取到的数据创建一个 TreasureChest 对象实例
-		# 注意：构造函数期望第二个参数是整数，这里直接传入字符串 'AnswerLine' 和 'Points' 是不正确的
-		# 正确做法应该是：Question = TreasureChest(QuestionLine, int(AnswerLine), int(Points))
-		Question = TreasureChest(QuestionLine, AnswerLine, Points)
+		Question = TreasureChest(QuestionLine, int(AnswerLine), int(Points))
 
 		# 将新创建的对象添加到全局数组中
 		arrayTreasure.append(Question)
