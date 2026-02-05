@@ -69,8 +69,6 @@ def IterativeInsetion(ListToBeSorted):
 		# 当前元素的位置索引
 		CurrentItem = i
 		# 在已排序的部分中找到正确的插入位置
-		# 注意：这里的条件 `CurrentItem > -1` 应该是 `CurrentItem > 0` 以避免访问 ListToBeSorted[-1]
-		# 注意：赋值语句 `ListToBeSorted[CurrentItem] = ListToBeSorted[CurrentItem + 1]` 是错误的，应该是向左移动元素
 		while ItemToBeSorted < ListToBeSorted[CurrentItem] and CurrentItem > 0:
 			# 错误的赋值逻辑，会导致数据丢失和索引越界
 			ListToBeSorted[CurrentItem] = ListToBeSorted[CurrentItem - 1]
