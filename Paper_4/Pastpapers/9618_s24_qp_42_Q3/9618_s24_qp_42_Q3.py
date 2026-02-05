@@ -60,7 +60,7 @@ def RecursiveInsertion(IntegerArray, NumberElements):         # Returns ARRAY OF
 print("Recursive")
 print(RecursiveInsertion(NumberArray, len(NumberArray)))
 
-# 迭代实现的插入排序函数 (注意：原代码存在逻辑错误，此处保留原样)
+# 迭代实现的插入排序函数
 def IterativeInsetion(ListToBeSorted):
 	# 遍历列表中的每个元素（从第二个开始）
 	for i in range(0, len(ListToBeSorted)):
@@ -70,7 +70,6 @@ def IterativeInsetion(ListToBeSorted):
 		CurrentItem = i
 		# 在已排序的部分中找到正确的插入位置
 		while ItemToBeSorted < ListToBeSorted[CurrentItem] and CurrentItem > 0:
-			# 错误的赋值逻辑，会导致数据丢失和索引越界
 			ListToBeSorted[CurrentItem] = ListToBeSorted[CurrentItem - 1]
 			CurrentItem -= 1
 		# 将元素放到找到的位置
