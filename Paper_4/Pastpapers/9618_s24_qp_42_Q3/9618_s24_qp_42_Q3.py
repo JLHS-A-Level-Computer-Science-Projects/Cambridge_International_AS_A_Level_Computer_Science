@@ -82,25 +82,37 @@ print("iterative")
 print(IterativeInsetion(NumberArray))
 
 def BinarySearch(IntegerArray, First, Last, ToFind):
-	'''
-	IntegerArray: type: ARRAY OF INTEGERS
-	First: type: INTEGER
-	Last: type: INTEGER
-	ToFind: INTEGER
-	'''
-	Middle = (First + Last) // 2 + 1
-	if ToFind == IntegerArray[Middle]:
-		return Middle
-	else:
-		if First >= Last:
-			return -1
-		else:
-			if ToFind < IntegerArray[Middle]:
-				return BinarySearch(IntegerArray, First, Middle - 1, ToFind)
-			else:
-				return BinarySearch(IntegerArray, Middle - 1, Last, ToFind)
+    '''
+    IntegerArray: type: ARRAY OF INTEGERS  # 待搜索的已排序整数数组
+    First: type: INTEGER                   # 搜索范围的起始索引
+    Last: type: INTEGER                    # 搜索范围的结束索引
+    ToFind: INTEGER                        # 要查找的目标值
+    '''
+    # 计算中间索引：这里用 (First + Last) // 2 + 1
+    Middle = (First + Last) // 2 + 1
+    
+    # 基本情况：如果中间元素正好等于目标值，返回中间索引
+    if ToFind == IntegerArray[Middle]:
+        return Middle
+    else:
+        # 如果搜索范围无效（起始索引大于等于结束索引），说明未找到，返回-1
+        if First >= Last:
+            return -1
+        else:
+            # 如果目标值小于中间元素，说明目标值可能在左半部分
+            # 递归调用二分查找，搜索范围缩小为 [First, Middle-1]
+            if ToFind < IntegerArray[Middle]:
+                return BinarySearch(IntegerArray, First, Middle - 1, ToFind)
+            # 否则目标值大于中间元素，说明目标值可能在右半部分
+            # 递归调用二分查找，搜索范围缩小为 [Middle-1, Last]
+            # 注意：这里用了 Middle-1 而非 Middle+1，可能导致搜索范围重叠或漏掉元素
+            else:
+                return BinarySearch(IntegerArray, Middle - 1, Last, ToFind)
 
+# 异常处理：如果二分查找过程中发生错误（如索引越界），则打印"Not Found"
 try:
-	print(BinarySearch(NumberArray, 0, 6, 644))
+    # 在数组 NumberArray 的索引 0 到 6 范围内查找值 644
+    print(BinarySearch(NumberArray, 0, 6, 644))
 except:
-	print("Not Found")
+    # 如果发生异常，捕获并输出提示信息
+    print("Not Found")
