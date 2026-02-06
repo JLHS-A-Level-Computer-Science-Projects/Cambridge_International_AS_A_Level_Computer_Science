@@ -104,10 +104,9 @@ def BinarySearch(IntegerArray, First, Last, ToFind):
             if ToFind < IntegerArray[Middle]:
                 return BinarySearch(IntegerArray, First, Middle - 1, ToFind)
             # 否则目标值大于中间元素，说明目标值可能在右半部分
-            # 递归调用二分查找，搜索范围缩小为 [Middle-1, Last]
-            # 注意：这里用了 Middle-1 而非 Middle+1，可能导致搜索范围重叠或漏掉元素
+            # 递归调用二分查找，搜索范围缩小为 [Middle+1, Last]
             else:
-                return BinarySearch(IntegerArray, Middle - 1, Last, ToFind)
+                return BinarySearch(IntegerArray, Middle + 1, Last, ToFind)
 
 # 异常处理：如果二分查找过程中发生错误（如索引越界），则打印"Not Found"
 try:
