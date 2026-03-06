@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 # 定义常量
 EMPTY_STR = ""  # 空字符串常量，用于表示空值
 NULL_PTR = -1   # 空指针常量，表示无效的指针位置

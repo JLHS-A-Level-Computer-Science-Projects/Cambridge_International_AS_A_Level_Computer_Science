@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 # 定义空指针常量，表示链表的结束
 NULL_POINTER = -1
 

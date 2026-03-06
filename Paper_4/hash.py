@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 # 定义哈希函数，使用除法取余法，将键值映射到 0-9 的索引范围内
 def HashFunc(Key):
 	return Key % 10

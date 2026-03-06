@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 class Person:
     def __init__(self, n, a):
         """

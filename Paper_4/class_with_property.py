@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 # 定义一个名为 Car 的类，用于表示汽车对象
 class Car:
     # 构造函数（初始化方法），在创建新对象时自动调用

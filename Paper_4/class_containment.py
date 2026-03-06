@@ -1,13 +1,13 @@
-# ¶¨ÒåLessonÀà£¬ÓÃÓÚ±íÊ¾¿Î³ÌÖĞµÄµ¥¸ö¿ÎÊ±
+#Created by 4AMAlan
 class Lesson:
 	def __init__(self, t, d, r):
-		# ³õÊ¼»¯Lesson¶ÔÏó£¬ÉèÖÃ¿ÎÊ±µÄ±êÌâ¡¢Ê±³¤ºÍÊÇ·ñĞèÒªÊµÑéÊÒ
+		# ï¿½ï¿½Ê¼ï¿½ï¿½Lessonï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½Ê±ï¿½Ä±ï¿½ï¿½â¡¢Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ÒªÊµï¿½ï¿½ï¿½ï¿½
 		self.__LessonTitle = t        #Private attribute, type: STRING
 		self.__DurationMinutes = d    #Private attribute, type: INTEGER
 		self.__RequiresLab = r        #Private attribute, type: Boolean
 
 	def OutputLessonDetails(self):
-		# Êä³öµ±Ç°¿ÎÊ±µÄÏêÏ¸ĞÅÏ¢
+		# ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
 		print("Lesson Details")
 		print("Lesson Title:", self.__LessonTitle)
 		print("Duration Minutes:", self.__DurationMinutes)
@@ -15,67 +15,67 @@ class Lesson:
 		print("End Lesson Details")
 		return ""
 
-# ¶¨ÒåAssessmentÀà£¬ÓÃÓÚ±íÊ¾¿Î³ÌÖĞµÄÆÀ¹À
+# ï¿½ï¿½ï¿½ï¿½Assessmentï¿½à£¬ï¿½ï¿½ï¿½Ú±ï¿½Ê¾ï¿½Î³ï¿½ï¿½Ğµï¿½ï¿½ï¿½ï¿½ï¿½
 class Assessment:
 	def __init__(self, at, m):
-		# ³õÊ¼»¯Assessment¶ÔÏó£¬ÉèÖÃÆÀ¹ÀµÄ±êÌâºÍ×î´ó·ÖÊı
+		# ï¿½ï¿½Ê¼ï¿½ï¿½Assessmentï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		self.__AssessmentTitle = at   #Private attribute, type: STRING
 		self.__MaxMarks = m           #Private attribute, type: INTEGER
 
 	def OutputAssessmentDetails(self):
-		# Êä³öµ±Ç°ÆÀ¹ÀµÄÏêÏ¸ĞÅÏ¢
+		# ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
 		print("Assessment Details")
 		print("Assessment Title:", self.__AssessmentTitle)
 		print("MaxMarks:", self.__MaxMarks)
 		print("End Assessment Details")
 		return ""
 
-# ¶¨ÒåCourseÀà£¬ÓÃÓÚ±íÊ¾ÍêÕûµÄ¿Î³Ì
+# ï¿½ï¿½ï¿½ï¿½Courseï¿½à£¬ï¿½ï¿½ï¿½Ú±ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Î³ï¿½
 class Course:
 	def __init__(self, t, m):
-		# ³õÊ¼»¯Course¶ÔÏó£¬ÉèÖÃ¿Î³Ì±êÌâºÍ×î´óÑ§ÉúÊı£¬²¢³õÊ¼»¯ÆäËûÏà¹ØÊôĞÔ
+		# ï¿½ï¿½Ê¼ï¿½ï¿½Courseï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿Î³Ì±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		self.__CourseTitle = t
 		self.__MaxStudents = m
-		self.__NumberOfLessons = 0  # ¼ÇÂ¼¿Î³ÌÖĞ¿ÎÊ±µÄÊıÁ¿
-		self.__CourseLesson = []    # ´æ´¢¿Î³ÌÖĞËùÓĞ¿ÎÊ±µÄÁĞ±í
-		self.__CourseAssessment = Assessment  # ´æ´¢¿Î³ÌÆÀ¹À¶ÔÏó£¨×¢Òâ£ºÕâÀïÓ¦¸ÃÊÇNone»òÊµ¼ÊµÄAssessment¶ÔÏó£©
+		self.__NumberOfLessons = 0  # ï¿½ï¿½Â¼ï¿½Î³ï¿½ï¿½Ğ¿ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		self.__CourseLesson = []    # ï¿½æ´¢ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¿ï¿½Ê±ï¿½ï¿½ï¿½Ğ±ï¿½
+		self.__CourseAssessment = Assessment  # ï¿½æ´¢ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½â£ºï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Noneï¿½ï¿½Êµï¿½Êµï¿½Assessmentï¿½ï¿½ï¿½ï¿½
 
 	def AddLesson(self, t, d, r):
-		# Ïò¿Î³ÌÖĞÌí¼ÓÒ»¸öĞÂµÄ¿ÎÊ±
-		self.__NumberOfLessons += 1  # Ôö¼Ó¿ÎÊ±¼ÆÊı
-		self.__CourseLesson.append(Lesson(t, d, r))  # ´´½¨Lesson¶ÔÏó²¢Ìí¼Óµ½ÁĞ±íÖĞ
+		# ï¿½ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ÂµÄ¿ï¿½Ê±
+		self.__NumberOfLessons += 1  # ï¿½ï¿½ï¿½Ó¿ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
+		self.__CourseLesson.append(Lesson(t, d, r))  # ï¿½ï¿½ï¿½ï¿½Lessonï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½Ğ±ï¿½ï¿½ï¿½
 
 	def AddAssessment(self, t, m):
-		# Îª¿Î³ÌÌí¼ÓÆÀ¹À
-		self.__CourseAssessment = Assessment(t, m)  # ´´½¨Assessment¶ÔÏó²¢¸³Öµ¸ø¿Î³ÌÆÀ¹ÀÊôĞÔ
+		# Îªï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		self.__CourseAssessment = Assessment(t, m)  # ï¿½ï¿½ï¿½ï¿½Assessmentï¿½ï¿½ï¿½ó²¢¸ï¿½Öµï¿½ï¿½ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	def OutputCourseDetails(self):
-		# Êä³öÕû¸ö¿Î³ÌµÄÏêÏ¸ĞÅÏ¢£¬°üÀ¨¿Î³Ì»ù±¾ĞÅÏ¢¡¢ËùÓĞ¿ÎÊ±ĞÅÏ¢ºÍÆÀ¹ÀĞÅÏ¢
+		# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î³Ìµï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î³Ì»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¿ï¿½Ê±ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		print("Course Details")
 		print("Course Title:", self.__CourseTitle)
 		print("Max Students:", self.__MaxStudents)
 		print()
-		# ±éÀú²¢Êä³öËùÓĞ¿ÎÊ±µÄÏêÏ¸ĞÅÏ¢
+		# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¿ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
 		for i in range(self.__NumberOfLessons):
 			print(self.__CourseLesson[i].OutputLessonDetails())
-		# Êä³ö¿Î³ÌÆÀ¹ÀµÄÏêÏ¸ĞÅÏ¢
+		# ï¿½ï¿½ï¿½ï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
 		print(self.__CourseAssessment.OutputAssessmentDetails())
 
-# ¶¨ÒåÖ÷º¯Êı£¬ÑİÊ¾ÀàµÄÊ¹ÓÃ
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
 def Main():
-	# ´´½¨Ò»¸öÃûÎª"Computing"µÄ¿Î³Ì¶ÔÏó£¬×î´óÑ§ÉúÊıÎª10
+	# ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Îª"Computing"ï¿½Ä¿Î³Ì¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½Îª10
 	MyCourse = Course("Computing", 10)
 	
-	# Îª¿Î³ÌÌí¼ÓÆÀ¹À£¬±êÌâÎª"Programming"£¬×î´ó·ÖÊıÎª100
+	# Îªï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª"Programming"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª100
 	MyCourse.AddAssessment("Programming", 100)
 	
-	# Îª¿Î³ÌÌí¼ÓÈı¸ö¿ÎÊ±
-	MyCourse.AddLesson("Problem Solving", 60, False)  # ÎÊÌâ½â¾ö¿Î£¬60·ÖÖÓ£¬²»ĞèÒªÊµÑéÊÒ
-	MyCourse.AddLesson("Programming", 120, True)     # ±à³Ì¿Î£¬120·ÖÖÓ£¬ĞèÒªÊµÑéÊÒ
-	MyCourse.AddLesson("Theory", 60, False)          # ÀíÂÛ¿Î£¬60·ÖÖÓ£¬²»ĞèÒªÊµÑéÊÒ
+	# Îªï¿½Î³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±
+	MyCourse.AddLesson("Problem Solving", 60, False)  # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î£ï¿½60ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊµï¿½ï¿½ï¿½ï¿½
+	MyCourse.AddLesson("Programming", 120, True)     # ï¿½ï¿½Ì¿Î£ï¿½120ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ÒªÊµï¿½ï¿½ï¿½ï¿½
+	MyCourse.AddLesson("Theory", 60, False)          # ï¿½ï¿½ï¿½Û¿Î£ï¿½60ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊµï¿½ï¿½ï¿½ï¿½
 
-	# Êä³öÕû¸ö¿Î³ÌµÄÏêÏ¸ĞÅÏ¢
+	# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î³Ìµï¿½ï¿½ï¿½Ï¸ï¿½ï¿½Ï¢
 	MyCourse.OutputCourseDetails()
 
-# µ÷ÓÃÖ÷º¯ÊıÖ´ĞĞ³ÌĞò
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ğ³ï¿½ï¿½ï¿½
 Main()
