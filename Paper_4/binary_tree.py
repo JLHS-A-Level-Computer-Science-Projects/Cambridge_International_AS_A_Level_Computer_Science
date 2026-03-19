@@ -1,3 +1,4 @@
+#Created by 4AMAlan
 #Annotated by Qwen3-Coder
 # 定义空指针的值，表示没有指向任何节点
 NULLPOINTER = -1
