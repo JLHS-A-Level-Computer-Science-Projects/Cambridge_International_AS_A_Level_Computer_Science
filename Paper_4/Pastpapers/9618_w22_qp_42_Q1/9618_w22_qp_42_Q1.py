@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 # 全局变量定义
 # Jobs是一个二维数组，存储作业信息，每行包含作业编号和优先级
 Jobs = [[0 for i in range(2)] for i in range(100)]

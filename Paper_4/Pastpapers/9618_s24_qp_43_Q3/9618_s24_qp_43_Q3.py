@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 # 初始化一个全局列表，用于模拟队列，大小为20个元素
 QueueData = ["" for i in range(20)]   #global list
 # 全局变量，指向队列头部元素的索引

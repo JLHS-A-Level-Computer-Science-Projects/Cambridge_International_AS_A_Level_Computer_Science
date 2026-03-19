@@ -1,3 +1,5 @@
+#Created by 4AMAlan
+
 import random
 
 list1 = [0 for i in range(10)] #初始化list1，包含10个整数类型的元素
