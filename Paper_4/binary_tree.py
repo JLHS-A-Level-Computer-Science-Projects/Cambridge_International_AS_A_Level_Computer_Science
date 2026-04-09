@@ -114,15 +114,15 @@ def insertnode(newitem):
                 # 根据数据大小决定向左还是向右搜索
                 if thistree[thisnodeptr].data > newitem:
                     # 新数据小于当前节点数据，向左子树搜索
-                    tureleft = True  # 标记应该插入到左子树
+                    turnleft = True  # 标记应该插入到左子树
                     thisnodeptr = thistree[thisnodeptr].left
                 else:   
                     # 新数据大于等于当前节点数据，向右子树搜索
-                    tureleft = False  # 标记应该插入到右子树
+                    turnleft = False  # 标记应该插入到右子树
                     thisnodeptr = thistree[thisnodeptr].right
             
             # 将新节点连接到父节点的相应位置
-            if tureleft == True:
+            if turnleft == True:
                 # 插入到父节点的左子树
                 thistree[previousnodeptr].left = newnodeptr
             else:
