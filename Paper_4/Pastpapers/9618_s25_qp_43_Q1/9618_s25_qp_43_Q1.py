@@ -40,9 +40,8 @@ def CreateQueue():
 		except:
 			print("Reading Error")
 		if Content == "":
-				break		
+			break		
 		Enqueue(int(Content))
-		#print(Queue)
 	if NumberOfElements == 50:
 		print("The queue is full.")
 	f.close()
