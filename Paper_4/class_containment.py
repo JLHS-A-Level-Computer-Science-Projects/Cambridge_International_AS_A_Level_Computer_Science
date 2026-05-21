@@ -1,13 +1,13 @@
 #Created by 4AMAlan
 class Lesson:
 	def __init__(self, t, d, r):
-		# ��ʼ��Lesson�������ÿ�ʱ�ı��⡢ʱ�����Ƿ���Ҫʵ����
+		# Initialize Lesson with title, duration in minutes, and whether lab is required
 		self.__LessonTitle = t        #Private attribute, type: STRING
 		self.__DurationMinutes = d    #Private attribute, type: INTEGER
 		self.__RequiresLab = r        #Private attribute, type: Boolean
 
 	def OutputLessonDetails(self):
-		# �����ǰ��ʱ����ϸ��Ϣ
+		# Output the current lesson's detailed information
 		print("Lesson Details")
 		print("Lesson Title:", self.__LessonTitle)
 		print("Duration Minutes:", self.__DurationMinutes)
@@ -15,67 +15,67 @@ class Lesson:
 		print("End Lesson Details")
 		return ""
 
-# ����Assessment�࣬���ڱ�ʾ�γ��е�����
+# Create Assessment class, used to represent assessments in the course
 class Assessment:
 	def __init__(self, at, m):
-		# ��ʼ��Assessment�������������ı����������
+		# Initialize Assessment with assessment title and maximum marks
 		self.__AssessmentTitle = at   #Private attribute, type: STRING
 		self.__MaxMarks = m           #Private attribute, type: INTEGER
 
 	def OutputAssessmentDetails(self):
-		# �����ǰ��������ϸ��Ϣ
+		# Output the current assessment's detailed information
 		print("Assessment Details")
 		print("Assessment Title:", self.__AssessmentTitle)
 		print("MaxMarks:", self.__MaxMarks)
 		print("End Assessment Details")
 		return ""
 
-# ����Course�࣬���ڱ�ʾ�����Ŀγ�
+# Create Course class, used to represent a complete course
 class Course:
 	def __init__(self, t, m):
-		# ��ʼ��Course�������ÿγ̱�������ѧ����������ʼ�������������
+		# Initialize Course with course title, maximum students, initialize lesson count and assessment
 		self.__CourseTitle = t
 		self.__MaxStudents = m
-		self.__NumberOfLessons = 0  # ��¼�γ��п�ʱ������
-		self.__CourseLesson = []    # �洢�γ������п�ʱ���б�
-		self.__CourseAssessment = Assessment  # �洢�γ���������ע�⣺����Ӧ����None��ʵ�ʵ�Assessment����
+		self.__NumberOfLessons = 0  # Record the number of lessons in the course
+		self.__CourseLesson = []    # Store a list of lessons in the course
+		self.__CourseAssessment = Assessment  # Store assessment Note: should be None initially, not Assessment instance
 
 	def AddLesson(self, t, d, r):
-		# ��γ�������һ���µĿ�ʱ
-		self.__NumberOfLessons += 1  # ���ӿ�ʱ����
-		self.__CourseLesson.append(Lesson(t, d, r))  # ����Lesson�������ӵ��б���
+		# Add a new lesson to the course
+		self.__NumberOfLessons += 1  # Increment lesson count
+		self.__CourseLesson.append(Lesson(t, d, r))  # Create Lesson object and add to list
 
 	def AddAssessment(self, t, m):
-		# Ϊ�γ���������
-		self.__CourseAssessment = Assessment(t, m)  # ����Assessment���󲢸�ֵ���γ���������
+		# Add assessment to the course
+		self.__CourseAssessment = Assessment(t, m)  # Create Assessment object and assign to course assessment
 
 	def OutputCourseDetails(self):
-		# ��������γ̵���ϸ��Ϣ�������γ̻�����Ϣ�����п�ʱ��Ϣ��������Ϣ
+		# Output detailed course information including course info, lesson info, and assessment info
 		print("Course Details")
 		print("Course Title:", self.__CourseTitle)
 		print("Max Students:", self.__MaxStudents)
 		print()
-		# ������������п�ʱ����ϸ��Ϣ
+		# Output detailed information for all lessons in the course
 		for i in range(self.__NumberOfLessons):
 			print(self.__CourseLesson[i].OutputLessonDetails())
-		# ����γ���������ϸ��Ϣ
+		# Output assessment detailed information
 		print(self.__CourseAssessment.OutputAssessmentDetails())
 
-# ��������������ʾ���ʹ��
+# Main function to demonstrate usage
 def Main():
-	# ����һ����Ϊ"Computing"�Ŀγ̶������ѧ����Ϊ10
+	# Create a course named "Computing" with maximum students of 10
 	MyCourse = Course("Computing", 10)
 	
-	# Ϊ�γ���������������Ϊ"Programming"��������Ϊ100
+	# Add assessment to the course named "Programming" with maximum marks of 100
 	MyCourse.AddAssessment("Programming", 100)
 	
-	# Ϊ�γ�����������ʱ
-	MyCourse.AddLesson("Problem Solving", 60, False)  # �������Σ�60���ӣ�����Ҫʵ����
-	MyCourse.AddLesson("Programming", 120, True)     # ��̿Σ�120���ӣ���Ҫʵ����
-	MyCourse.AddLesson("Theory", 60, False)          # ���ۿΣ�60���ӣ�����Ҫʵ����
+	# Add lessons to the course
+	MyCourse.AddLesson("Problem Solving", 60, False)  # Problem Solving: 60 minutes, does not require lab
+	MyCourse.AddLesson("Programming", 120, True)     # Programming: 120 minutes, requires lab
+	MyCourse.AddLesson("Theory", 60, False)          # Theory: 60 minutes, does not require lab
 
-	# ��������γ̵���ϸ��Ϣ
+	# Output detailed course information
 	MyCourse.OutputCourseDetails()
 
-# ����������ִ�г���
+# Run the main program
 Main()
